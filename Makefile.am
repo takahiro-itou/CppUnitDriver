@@ -20,7 +20,7 @@ testee_binary_dir       =  ..
 
 DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
-EXTRA_TEST_DRIVERS          =
+extra_test_drivers          =
 library_test_drivers        =
 source_test_drivers         =
 
@@ -39,7 +39,7 @@ include  ${srcdir}/TestConf.mak
 
 DIST_NOINST_DATA_FILES      +=  CMakeLists.txt
 DIST_NOINST_HEADER_FILES    +=  TestDriver.h
-EXTRA_TEST_DRIVERS          +=
+extra_test_drivers          +=
 library_test_drivers        +=  libTestDriver.a
 source_test_drivers         +=  TestDriver.cpp
 

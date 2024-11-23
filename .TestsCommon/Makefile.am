@@ -9,9 +9,9 @@
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc
 
-DRIVER_SOURCE_DIR       =  ${LIBTOP_SOURCE_DIR}/Tests
+driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
 DRIVER_BINARY_DIR       =  ${LIBTOP_BINARY_DIR}/Tests
-TESTEE_SOURCE_DIR       =  @srcdir@/..
+testee_source_dir       =  @srcdir@/..
 TESTEE_BINARY_DIR       =  ..
 
 ##
@@ -22,7 +22,7 @@ TARGET_TESTEE_LIBRARY       =
 
 DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
-EXTRA_TEST_DRIVERS          =
+extra_test_drivers          =
 library_test_drivers        =
 SOURCE_TEST_DRIVERS         =
 
@@ -41,7 +41,7 @@ include  ${srcdir}/TestConf.mak
 
 DIST_NOINST_DATA_FILES      +=  CMakeLists.txt  TestConf.cmake
 DIST_NOINST_HEADER_FILES    +=
-EXTRA_TEST_DRIVERS          +=
+extra_test_drivers          +=
 library_test_drivers        +=  ${DRIVER_BINARY_DIR}/libTestDriver.a
 SOURCE_TEST_DRIVERS         +=
 
@@ -64,10 +64,10 @@ TEST_LINK_LDADD_XUNIT       =
 endif
 
 AM_CPPFLAGS         =  \
-        -I${TESTEE_SOURCE_DIR}      \
+        -I${testee_source_dir}      \
         -I${INCTOP_SOURCE_DIR}      \
         -I${LIBTOP_SOURCE_DIR}      \
-        -I${DRIVER_SOURCE_DIR}      \
+        -I${driver_source_dir}      \
         -I${DRIVER_BINARY_DIR}      \
         ${TEST_CPPFLAGS_COMMON}     \
         ${TEST_CPPFLAGS_XUNIT}
