@@ -11,7 +11,7 @@ include  ${top_srcdir}/.M4/Makefile.DirList.inc
 
 driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
 driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
-TESTEE_SOURCE_DIR       =  @srcdir@/..
+testee_source_dir       =  @srcdir@/..
 TESTEE_BINARY_DIR       =  ..
 
 ##
@@ -62,7 +62,7 @@ TEST_LINK_LDADD_XUNIT       =
 endif
 
 AM_CPPFLAGS         =  \
-        -I${TESTEE_SOURCE_DIR}      \
+        -I${testee_source_dir}      \
         -I${INCTOP_SOURCE_DIR}      \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
