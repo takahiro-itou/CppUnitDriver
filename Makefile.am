@@ -9,7 +9,7 @@
 
 include  ${top_srcdir}/.M4/Makefile.DirList.inc
 
-DRIVER_SOURCE_DIR       =  ${LIBTOP_SOURCE_DIR}/Tests
+driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
 DRIVER_BINARY_DIR       =  ${LIBTOP_BINARY_DIR}/Tests
 TESTEE_SOURCE_DIR       =  @srcdir@/..
 TESTEE_BINARY_DIR       =  ..
@@ -31,7 +31,7 @@ TEST_LDFLAGS_COMMON         =
 ##    Test Configurations.
 ##
 
-include  $(srcdir)/TestConf.mak
+include  ${srcdir}/TestConf.mak
 
 ##
 ##    List of Source and Header Files.
@@ -64,7 +64,7 @@ endif
 AM_CPPFLAGS         =  \
         -I${TESTEE_SOURCE_DIR}      \
         -I${INCTOP_SOURCE_DIR}      \
-        -I${DRIVER_SOURCE_DIR}      \
+        -I${driver_source_dir}      \
         -I${DRIVER_BINARY_DIR}      \
         ${TEST_CPPFLAGS_COMMON}     \
         ${TEST_CPPFLAGS_XUNIT}
