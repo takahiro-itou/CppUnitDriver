@@ -14,12 +14,12 @@ set(DRIVER_BINARY_DIR       "${LIBTOP_BINARY_DIR}/Tests")
 ##    テストの設定。
 ##
 
-set(TESTER_LINK_LIBRARIES
+set(tester_link_libraries
         ${PROJECT_NAME}-${TARGET_TESTEE_LIBRARY}
         ${PROJECT_NAME}-TestDriver
 )
 
 include_directories(${PROJECT_SOURCE_DIR}/Lib/Tests)
-link_libraries     (${TESTER_LINK_LIBRARIES})
+link_libraries     (${tester_link_libraries})
 
 Include (TestConf.cmake)

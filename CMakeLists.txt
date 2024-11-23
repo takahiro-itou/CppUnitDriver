@@ -30,15 +30,15 @@ set(INCLIB_HEADER_FILES
 
 Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
 
-set(TEST_DRIVER_MODULE  "${PROJECT_NAME}-${MODULE_TARGET_NAME}")
-message(STATUS  "TEST_DRIVER_MODULE = ${TEST_DRIVER_MODULE}")
+set(test_driver_module  "${PROJECT_NAME}-${MODULE_TARGET_NAME}")
+message(STATUS  "test_driver_module = ${test_driver_module}")
 
 If ( TARGET  CPPUNIT::CPPUNIT )
-    target_link_libraries(${TEST_DRIVER_MODULE}     CPPUNIT::CPPUNIT)
+    target_link_libraries(${test_driver_module}     CPPUNIT::CPPUNIT)
     message(STATUS  "Target CPPUNIT::CPPUNIT is defined.")
 Else  ()
     target_compile_definitions(
-        ${TEST_DRIVER_MODULE}   PUBLIC  HAVE_CPPUNIT=0
+        ${test_driver_module}   PUBLIC  HAVE_CPPUNIT=0
     )
     message(WARNING "Target CPPUNIT::CPPUNIT is NOT defined.")
 EndIf ()
