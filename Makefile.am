@@ -24,7 +24,7 @@ EXTRA_TEST_DRIVERS          =
 LIBRARY_TEST_DRIVERS        =
 source_test_drivers         =
 
-TEST_CPPFLAGS_COMMON        =
+test_cppflags_common        =
 TEST_LDFLAGS_COMMON         =
 
 ##
@@ -47,7 +47,7 @@ source_test_drivers         +=  TestDriver.cpp
 ##    Compile and Link Options.
 ##
 
-TEST_CPPFLAGS_COMMON        +=
+test_cppflags_common        +=
 TEST_LDFLAGS_COMMON         +=
 
 TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
@@ -66,7 +66,7 @@ AM_CPPFLAGS         =  \
         -I${INCTOP_SOURCE_DIR}      \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
-        ${TEST_CPPFLAGS_COMMON}     \
+        ${test_cppflags_common}     \
         ${TEST_CPPFLAGS_XUNIT}
 
 AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
