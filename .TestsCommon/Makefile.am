@@ -23,17 +23,17 @@ TARGET_TESTEE_LIBRARY       =
 DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
 EXTRA_TEST_DRIVERS          =
-LIBRARY_TEST_DRIVERS        =
+library_test_drivers        =
 SOURCE_TEST_DRIVERS         =
 
 TEST_CPPFLAGS_COMMON        =
-TEST_LDFLAGS_COMMON         =
+test_ldflags_common         =
 
 ##
 ##    Test Configurations.
 ##
 
-include  $(srcdir)/TestConf.mak
+include  ${srcdir}/TestConf.mak
 
 ##
 ##    Append Test Configurations.
@@ -42,7 +42,7 @@ include  $(srcdir)/TestConf.mak
 DIST_NOINST_DATA_FILES      +=  CMakeLists.txt  TestConf.cmake
 DIST_NOINST_HEADER_FILES    +=
 EXTRA_TEST_DRIVERS          +=
-LIBRARY_TEST_DRIVERS        +=  ${DRIVER_BINARY_DIR}/libTestDriver.a
+library_test_drivers        +=  ${DRIVER_BINARY_DIR}/libTestDriver.a
 SOURCE_TEST_DRIVERS         +=
 
 ##
@@ -50,7 +50,7 @@ SOURCE_TEST_DRIVERS         +=
 ##
 
 TEST_CPPFLAGS_COMMON        +=
-TEST_LDFLAGS_COMMON         +=
+test_ldflags_common         +=
 
 TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
 TEST_CFLAGS_XUNIT           =  @CPPUNIT_CFLAGS@
@@ -76,12 +76,12 @@ AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
 AM_LDFLAGS          =  \
         -L${LIBTOP_BINARY_DIR}  \
-        ${TEST_LDFLAGS_COMMON}  \
+        ${test_ldflags_common}  \
         ${TEST_LDFLAGS_XUNIT}
 
 LDADD               =  \
         ${TARGET_TESTEE_LIBRARY}  \
-        ${LIBRARY_TEST_DRIVERS}   \
+        ${library_test_drivers}   \
         ${TEST_LINK_LDADD_XUNIT}
 
 ##
@@ -94,5 +94,4 @@ check_PROGRAMS      =  ${TESTS}
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.Install.inc
-
+include  ${top_srcdir}/.M4/Makefile.Install.inc

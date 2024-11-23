@@ -21,11 +21,11 @@ testee_binary_dir       =  ..
 DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
 EXTRA_TEST_DRIVERS          =
-LIBRARY_TEST_DRIVERS        =
+library_test_drivers        =
 source_test_drivers         =
 
 test_cppflags_common        =
-TEST_LDFLAGS_COMMON         =
+test_ldflags_common         =
 
 ##
 ##    Test Configurations.
@@ -40,7 +40,7 @@ include  ${srcdir}/TestConf.mak
 DIST_NOINST_DATA_FILES      +=  CMakeLists.txt
 DIST_NOINST_HEADER_FILES    +=  TestDriver.h
 EXTRA_TEST_DRIVERS          +=
-LIBRARY_TEST_DRIVERS        +=  libTestDriver.a
+library_test_drivers        +=  libTestDriver.a
 source_test_drivers         +=  TestDriver.cpp
 
 ##
@@ -48,7 +48,7 @@ source_test_drivers         +=  TestDriver.cpp
 ##
 
 test_cppflags_common        +=
-TEST_LDFLAGS_COMMON         +=
+test_ldflags_common         +=
 
 TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
 TEST_CFLAGS_XUNIT           =  @CPPUNIT_CFLAGS@
@@ -72,7 +72,7 @@ AM_CPPFLAGS         =  \
 AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
 AM_LDFLAGS          =  \
-        ${TEST_LDFLAGS_COMMON}   \
+        ${test_ldflags_common}   \
         ${TEST_LDFLAGS_XUNIT}
 
 LDADD               =  \
@@ -83,17 +83,16 @@ LDADD               =  \
 ##
 
 check_PROGRAMS      =  ${TESTS}
-noinst_LIBRARIES    =  ${LIBRARY_TEST_DRIVERS}
+noinst_LIBRARIES    =  ${library_test_drivers}
 
 ##
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.Install.inc
+include  ${top_srcdir}/.M4/Makefile.Install.inc
 
 ##
 ##    Build of Test Drivers.
 ##
 
 libTestDriver_a_SOURCES     =  ${source_test_drivers}
-
