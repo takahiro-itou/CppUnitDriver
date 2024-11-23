@@ -52,13 +52,13 @@ test_ldflags_common         +=
 
 test_cppflags_xunit         =  @CPPUNIT_CPPFLAGS@
 test_cflags_xunit           =  @CPPUNIT_CFLAGS@
-TEST_CXXFLAGS_XUNIT         =  @CPPUNIT_CXXFLAGS@
+test_cxxflags_xunit         =  @CPPUNIT_CXXFLAGS@
 test_ldflags_xunit          =  @CPPUNIT_LDFLAGS@
 
 if  AMCNF_CPPUNIT_ENABLED
-TEST_LINK_LDADD_XUNIT       =  @CPPUNIT_LINK_LDADD@
+test_link_ldadd_xunit       =  @CPPUNIT_LINK_LDADD@
 else
-TEST_LINK_LDADD_XUNIT       =
+test_link_ldadd_xunit       =
 endif
 
 AM_CPPFLAGS         =  \
@@ -70,13 +70,13 @@ AM_CPPFLAGS         =  \
         ${test_cppflags_xunit}
 
 AM_CFLAGS           =  ${test_cflags_xunit}
-AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
+AM_CXXFLAGS         =  ${test_cxxflags_xunit}
 AM_LDFLAGS          =  \
         ${test_ldflags_common}   \
         ${test_ldflags_xunit}
 
 LDADD               =  \
-        ${TEST_LINK_LDADD_XUNIT}
+        ${test_link_ldadd_xunit}
 
 ##
 ##    List of Installs.
