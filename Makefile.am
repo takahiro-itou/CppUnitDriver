@@ -22,7 +22,7 @@ DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
 EXTRA_TEST_DRIVERS          =
 LIBRARY_TEST_DRIVERS        =
-SOURCE_TEST_DRIVERS         =
+source_test_drivers         =
 
 TEST_CPPFLAGS_COMMON        =
 TEST_LDFLAGS_COMMON         =
@@ -41,7 +41,7 @@ DIST_NOINST_DATA_FILES      +=  CMakeLists.txt
 DIST_NOINST_HEADER_FILES    +=  TestDriver.h
 EXTRA_TEST_DRIVERS          +=
 LIBRARY_TEST_DRIVERS        +=  libTestDriver.a
-SOURCE_TEST_DRIVERS         +=  TestDriver.cpp
+source_test_drivers         +=  TestDriver.cpp
 
 ##
 ##    Compile and Link Options.
@@ -95,5 +95,5 @@ include  $(top_srcdir)/.M4/Makefile.Install.inc
 ##    Build of Test Drivers.
 ##
 
-libTestDriver_a_SOURCES     =  ${SOURCE_TEST_DRIVERS}
+libTestDriver_a_SOURCES     =  ${source_test_drivers}
 
