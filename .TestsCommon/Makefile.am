@@ -33,7 +33,7 @@ test_ldflags_common         =
 ##    Test Configurations.
 ##
 
-include  ${srcdir}/TestConf.mak
+include  $(srcdir)/TestConf.mak
 
 ##
 ##    Append Test Configurations.
@@ -94,4 +94,4 @@ check_PROGRAMS      =  ${TESTS}
 ##    Include Common Install Settings.
 ##
 
-include  ${top_srcdir}/.M4/Makefile.Install.inc
+include  $(top_srcdir)/.M4/Makefile.Install.inc

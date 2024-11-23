@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-include  ${top_srcdir}/.M4/Makefile.DirList.inc
+include  $(top_srcdir)/.M4/Makefile.DirList.inc
 
 driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
 driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
@@ -31,7 +31,7 @@ test_ldflags_common         =
 ##    Test Configurations.
 ##
 
-include  ${srcdir}/TestConf.mak
+include  $(srcdir)/TestConf.mak
 
 ##
 ##    List of Source and Header Files.
@@ -89,7 +89,7 @@ noinst_LIBRARIES    =  ${library_test_drivers}
 ##    Include Common Install Settings.
 ##
 
-include  ${top_srcdir}/.M4/Makefile.Install.inc
+include  $(top_srcdir)/.M4/Makefile.Install.inc
 
 ##
 ##    Build of Test Drivers.
