@@ -26,7 +26,7 @@ extra_test_drivers          =
 library_test_drivers        =
 source_test_drivers         =
 
-TEST_CPPFLAGS_COMMON        =
+test_cppflags_common        =
 test_ldflags_common         =
 
 ##
@@ -49,13 +49,13 @@ source_test_drivers         +=
 ##    Compile and Link Options.
 ##
 
-TEST_CPPFLAGS_COMMON        +=
+test_cppflags_common        +=
 test_ldflags_common         +=
 
 test_cppflags_xunit         =  @CPPUNIT_CPPFLAGS@
-TEST_CFLAGS_XUNIT           =  @CPPUNIT_CFLAGS@
+test_cflags_xunit           =  @CPPUNIT_CFLAGS@
 TEST_CXXFLAGS_XUNIT         =  @CPPUNIT_CXXFLAGS@
-TEST_LDFLAGS_XUNIT          =  @CPPUNIT_LDFLAGS@
+test_ldflags_xunit          =  @CPPUNIT_LDFLAGS@
 
 if  AMCNF_CPPUNIT_ENABLED
 TEST_LINK_LDADD_XUNIT       =  @CPPUNIT_LINK_LDADD@
@@ -69,15 +69,15 @@ AM_CPPFLAGS         =  \
         -I${LIBTOP_SOURCE_DIR}      \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
-        ${TEST_CPPFLAGS_COMMON}     \
+        ${test_cppflags_common}     \
         ${test_cppflags_xunit}
 
-AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
+AM_CFLAGS           =  ${test_cflags_xunit}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
 AM_LDFLAGS          =  \
         -L${LIBTOP_BINARY_DIR}  \
         ${test_ldflags_common}  \
-        ${TEST_LDFLAGS_XUNIT}
+        ${test_ldflags_xunit}
 
 LDADD               =  \
         ${TARGET_TESTEE_LIBRARY}  \
