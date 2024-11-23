@@ -12,7 +12,7 @@ include  ${top_srcdir}/.M4/Makefile.DirList.inc
 driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
 driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
 testee_source_dir       =  @srcdir@/..
-TESTEE_BINARY_DIR       =  ..
+testee_binary_dir       =  ..
 
 ##
 ##    Initialize Test Configurations.
