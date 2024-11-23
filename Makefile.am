@@ -50,7 +50,7 @@ source_test_drivers         +=  TestDriver.cpp
 test_cppflags_common        +=
 test_ldflags_common         +=
 
-TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
+test_cppflags_xunit         =  @CPPUNIT_CPPFLAGS@
 TEST_CFLAGS_XUNIT           =  @CPPUNIT_CFLAGS@
 TEST_CXXFLAGS_XUNIT         =  @CPPUNIT_CXXFLAGS@
 TEST_LDFLAGS_XUNIT          =  @CPPUNIT_LDFLAGS@
@@ -67,7 +67,7 @@ AM_CPPFLAGS         =  \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
         ${test_cppflags_common}     \
-        ${TEST_CPPFLAGS_XUNIT}
+        ${test_cppflags_xunit}
 
 AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}

@@ -10,9 +10,9 @@
 include  $(top_srcdir)/.M4/Makefile.DirList.inc
 
 driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
-DRIVER_BINARY_DIR       =  ${LIBTOP_BINARY_DIR}/Tests
+driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
 testee_source_dir       =  @srcdir@/..
-TESTEE_BINARY_DIR       =  ..
+testee_binary_dir       =  ..
 
 ##
 ##    Initialize Test Configurations.
@@ -24,7 +24,7 @@ DIST_NOINST_DATA_FILES      =
 DIST_NOINST_HEADER_FILES    =
 extra_test_drivers          =
 library_test_drivers        =
-SOURCE_TEST_DRIVERS         =
+source_test_drivers         =
 
 TEST_CPPFLAGS_COMMON        =
 test_ldflags_common         =
@@ -42,8 +42,8 @@ include  ${srcdir}/TestConf.mak
 DIST_NOINST_DATA_FILES      +=  CMakeLists.txt  TestConf.cmake
 DIST_NOINST_HEADER_FILES    +=
 extra_test_drivers          +=
-library_test_drivers        +=  ${DRIVER_BINARY_DIR}/libTestDriver.a
-SOURCE_TEST_DRIVERS         +=
+library_test_drivers        +=  ${driver_binary_dir}/libTestDriver.a
+source_test_drivers         +=
 
 ##
 ##    Compile and Link Options.
@@ -52,7 +52,7 @@ SOURCE_TEST_DRIVERS         +=
 TEST_CPPFLAGS_COMMON        +=
 test_ldflags_common         +=
 
-TEST_CPPFLAGS_XUNIT         =  @CPPUNIT_CPPFLAGS@
+test_cppflags_xunit         =  @CPPUNIT_CPPFLAGS@
 TEST_CFLAGS_XUNIT           =  @CPPUNIT_CFLAGS@
 TEST_CXXFLAGS_XUNIT         =  @CPPUNIT_CXXFLAGS@
 TEST_LDFLAGS_XUNIT          =  @CPPUNIT_LDFLAGS@
@@ -68,9 +68,9 @@ AM_CPPFLAGS         =  \
         -I${INCTOP_SOURCE_DIR}      \
         -I${LIBTOP_SOURCE_DIR}      \
         -I${driver_source_dir}      \
-        -I${DRIVER_BINARY_DIR}      \
+        -I${driver_binary_dir}      \
         ${TEST_CPPFLAGS_COMMON}     \
-        ${TEST_CPPFLAGS_XUNIT}
+        ${test_cppflags_xunit}
 
 AM_CFLAGS           =  ${TEST_CFLAGS_XUNIT}
 AM_CXXFLAGS         =  ${TEST_CXXFLAGS_XUNIT}
