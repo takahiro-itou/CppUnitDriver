@@ -6,8 +6,8 @@
 
 set(TARGET_TESTEE_LIBRARY   "${MODULE_TITLE}")
 
-set(DRIVER_SOURCE_DIR       "${LIBTOP_SOURCE_DIR}/Tests")
-set(DRIVER_BINARY_DIR       "${LIBTOP_BINARY_DIR}/Tests")
+set(DRIVER_SOURCE_DIR       "${libtop_source_dir}/Tests")
+set(DRIVER_BINARY_DIR       "${libtop_binary_dir}/Tests")
 
 ##----------------------------------------------------------------
 ##

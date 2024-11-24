@@ -9,8 +9,8 @@
 
 include  $(top_srcdir)/.M4/Makefile.DirList.inc
 
-driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
-driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
+driver_source_dir       =  ${libtop_source_dir}/Tests
+driver_binary_dir       =  ${libtop_binary_dir}/Tests
 testee_source_dir       =  @srcdir@/..
 testee_binary_dir       =  ..
 
@@ -65,8 +65,8 @@ endif
 
 AM_CPPFLAGS         =  \
         -I${testee_source_dir}      \
-        -I${INCTOP_SOURCE_DIR}      \
-        -I${LIBTOP_SOURCE_DIR}      \
+        -I${inctop_source_dir}      \
+        -I${libtop_source_dir}      \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
         ${test_cppflags_common}     \
@@ -75,7 +75,7 @@ AM_CPPFLAGS         =  \
 AM_CFLAGS           =  ${test_cflags_xunit}
 AM_CXXFLAGS         =  ${test_cxxflags_xunit}
 AM_LDFLAGS          =  \
-        -L${LIBTOP_BINARY_DIR}  \
+        -L${libtop_binary_dir}  \
         ${test_ldflags_common}  \
         ${test_ldflags_xunit}
 
