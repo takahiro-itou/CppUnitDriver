@@ -8,8 +8,8 @@ set(MODULE_DIR_NAME         "TestDriver")
 set(MODULE_OUTPUT_NAME      "TestDriver")
 set(MODULE_TITLE            "TestDriver")
 
-set(INCLIB_SOURCE_DIR       "${INCLUDE_SOURCE_DIR}/${MODULE_DIR_NAME}")
-set(INCLIB_BINARY_DIR       "${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
+set(inclib_source_dir       "${INCLUDE_SOURCE_DIR}/${MODULE_DIR_NAME}")
+set(inclib_binary_dir       "${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
 
 ##----------------------------------------------------------------
 ##
