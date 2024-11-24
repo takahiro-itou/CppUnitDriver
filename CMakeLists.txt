@@ -4,12 +4,9 @@
 ##    モジュールの設定。
 ##
 
-set(MODULE_DIR_NAME         "TestDriver")
-set(MODULE_OUTPUT_NAME      "TestDriver")
-set(MODULE_TITLE            "TestDriver")
+set(MODULE_TITLE        "TestDriver")
 
-set(inclib_source_dir       "${INCLUDE_SOURCE_DIR}/${MODULE_DIR_NAME}")
-set(inclib_binary_dir       "${INCLUDE_BINARY_DIR}/${MODULE_DIR_NAME}")
+Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
 
 ##----------------------------------------------------------------
 ##
