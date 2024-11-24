@@ -4,7 +4,7 @@
 ##    モジュールの設定。
 ##
 
-set(TARGET_TESTEE_LIBRARY   "${MODULE_TITLE}")
+set(TARGET_TESTEE_LIBRARY   "${module_title}")
 
 set(DRIVER_SOURCE_DIR       "${libtop_source_dir}/Tests")
 set(DRIVER_BINARY_DIR       "${libtop_binary_dir}/Tests")

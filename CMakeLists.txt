@@ -4,7 +4,7 @@
 ##    モジュールの設定。
 ##
 
-set(MODULE_TITLE        "TestDriver")
+set(module_title        "TestDriver")
 
 Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
 
