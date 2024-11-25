@@ -6,7 +6,7 @@
 
 set(module_title        "TestDriver")
 
-Include (${COMMON_CMAKE_DIR}/ConfigModule.cmake)
+Include (${common_cmake_dir}/ConfigModule.cmake)
 
 ##----------------------------------------------------------------
 ##
@@ -25,7 +25,7 @@ set(INCLIB_HEADER_FILES
 ##    ビルドとインストールの設定。
 ##
 
-Include (${COMMON_CMAKE_DIR}/BuildLibraryCommon.cmake)
+Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
 
 set(test_driver_module  "${PROJECT_NAME}-${MODULE_TARGET_NAME}")
 message(STATUS  "test_driver_module = ${test_driver_module}")
