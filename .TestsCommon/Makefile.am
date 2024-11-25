@@ -94,4 +94,4 @@ check_PROGRAMS      =  ${TESTS}
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.Install.inc
+include  $(top_srcdir)/.M4/Makefiles/Install.inc
