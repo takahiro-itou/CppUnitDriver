@@ -18,7 +18,7 @@ testee_binary_dir       =  ..
 ##    Initialize Test Configurations.
 ##
 
-DIST_NOINST_DATA_FILES      =
+dist_noinst_data_files      =
 DIST_NOINST_HEADER_FILES    =
 extra_test_drivers          =
 library_test_drivers        =
@@ -37,7 +37,7 @@ include  $(srcdir)/TestConf.mak
 ##    List of Source and Header Files.
 ##
 
-DIST_NOINST_DATA_FILES      +=  CMakeLists.txt
+dist_noinst_data_files      +=  CMakeLists.txt
 DIST_NOINST_HEADER_FILES    +=  TestDriver.h
 extra_test_drivers          +=
 library_test_drivers        +=  libTestDriver.a
