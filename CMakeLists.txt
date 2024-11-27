@@ -13,7 +13,7 @@ Include (${common_cmake_dir}/ConfigModule.cmake)
 ##    ソースファイルとヘッダファイルのリスト。
 ##
 
-set(LIBRARY_SOURCE_FILES
+set(library_source_files
         TestDriver.cpp
 )
 
