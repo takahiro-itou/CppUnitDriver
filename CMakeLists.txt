@@ -17,7 +17,7 @@ set(library_source_files
         TestDriver.cpp
 )
 
-set(INCLIB_HEADER_FILES
+set(inclib_header_files
 )
 
 ##----------------------------------------------------------------
