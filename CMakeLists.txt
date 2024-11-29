@@ -27,7 +27,7 @@ set(inclib_header_files
 
 Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
 
-set(test_driver_module  "${PROJECT_NAME}-${MODULE_TARGET_NAME}")
+set(test_driver_module  "${PROJECT_NAME}-${module_target_name}")
 message(STATUS  "test_driver_module = ${test_driver_module}")
 
 If ( TARGET  CPPUNIT::CPPUNIT )
