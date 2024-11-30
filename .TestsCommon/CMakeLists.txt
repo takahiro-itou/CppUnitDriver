@@ -17,7 +17,7 @@ Include (${common_cmake_dir}/ConfigTarget.cmake)
 ##
 
 set(tester_link_libraries
-        ${PROJECT_NAME}-${TARGET_TESTEE_LIBRARY}
+        ${project_target_prefix}${TARGET_TESTEE_LIBRARY}
         ${project_target_prefix}TestDriver
 )
 
