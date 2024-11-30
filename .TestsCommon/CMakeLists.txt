@@ -21,7 +21,7 @@ set(tester_link_libraries
         ${project_target_prefix}TestDriver
 )
 
-include_directories(${PROJECT_SOURCE_DIR}/Lib/Tests)
+include_directories(${libtop_source_dir}/Tests)
 link_libraries     (${tester_link_libraries})
 
 ##----------------------------------------------------------------
