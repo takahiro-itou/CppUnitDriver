@@ -25,7 +25,8 @@ set(inclib_header_files
 ##    ビルドとインストールの設定。
 ##
 
-Include (${common_cmake_dir}/BuildLibraryCommon.cmake)
+Include (${common_cmake_dir}/BuildCommon/BuildLib.cmake)
+Include (${common_cmake_dir}/BuildCommon/Install.cmake)
 
 set(test_driver_module  "${project_module_target}")
 message(STATUS  "test_driver_module = ${test_driver_module}")
