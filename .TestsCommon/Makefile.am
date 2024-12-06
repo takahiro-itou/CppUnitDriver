@@ -7,7 +7,7 @@
 ##    List of Directories.
 ##
 
-include  $(top_srcdir)/.M4/Makefiles/DirList.inc
+include  $(top_srcdir)/.M4/BuildCommon/DirList.inc
 
 driver_source_dir       =  ${libtop_source_dir}/Tests
 driver_binary_dir       =  ${libtop_binary_dir}/Tests
@@ -94,4 +94,4 @@ check_PROGRAMS      =  ${TESTS}
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefiles/Install.inc
+include  $(top_srcdir)/.M4/BuildCommon/Install.inc
