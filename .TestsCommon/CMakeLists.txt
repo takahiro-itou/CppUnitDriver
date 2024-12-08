@@ -9,7 +9,7 @@ set(target_testee_library   "${module_title}")
 set(driver_source_dir       "${libtop_source_dir}/Tests")
 set(driver_binary_dir       "${libtop_binary_dir}/Tests")
 
-Include (${common_cmake_dir}/ConfigTarget.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 ##----------------------------------------------------------------
 ##

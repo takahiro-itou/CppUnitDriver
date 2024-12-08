@@ -6,7 +6,8 @@
 
 set(module_title        "TestDriver")
 
-Include (${common_cmake_dir}/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigModule.cmake)
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 ##----------------------------------------------------------------
 ##
