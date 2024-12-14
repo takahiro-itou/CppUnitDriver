@@ -50,10 +50,10 @@ source_test_drivers         +=  TestDriver.cpp
 test_cppflags_common        +=
 test_ldflags_common         +=
 
-test_cppflags_xunit         =  @cppunit_CPPFLAGS@
+test_cppflags_xunit         =  @cppunit_cppflags@
 test_cflags_xunit           =  @cppunit_CFLAGS@
 test_cxxflags_xunit         =  @cppunit_CXXFLAGS@
-test_ldflags_xunit          =  @cppunit_LDFLAGS@
+test_ldflags_xunit          =  @cppunit_ldflags@
 
 if  AMCNF_CPPUNIT_ENABLED
 test_link_ldadd_xunit       =  @cppunit_link_ldadd@
