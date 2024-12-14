@@ -58,7 +58,7 @@ test_cxxflags_xunit         =  @CPPUNIT_CXXFLAGS@
 test_ldflags_xunit          =  @CPPUNIT_LDFLAGS@
 
 if  AMCNF_CPPUNIT_ENABLED
-test_link_ldadd_xunit       =  @CPPUNIT_LINK_LDADD@
+test_link_ldadd_xunit       =  @cppunit_link_ldadd@
 else
 test_link_ldadd_xunit       =
 endif
