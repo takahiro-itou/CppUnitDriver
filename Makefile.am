@@ -7,10 +7,10 @@
 ##    List of Directories.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.DirList.inc
+include  $(top_srcdir)/.M4/BuildCommon/DirList.inc
 
-driver_source_dir       =  ${LIBTOP_SOURCE_DIR}/Tests
-driver_binary_dir       =  ${LIBTOP_BINARY_DIR}/Tests
+driver_source_dir       =  ${libtop_source_dir}/Tests
+driver_binary_dir       =  ${libtop_binary_dir}/Tests
 testee_source_dir       =  @srcdir@/..
 testee_binary_dir       =  ..
 
@@ -18,8 +18,8 @@ testee_binary_dir       =  ..
 ##    Initialize Test Configurations.
 ##
 
-DIST_NOINST_DATA_FILES      =
-DIST_NOINST_HEADER_FILES    =
+dist_noinst_data_files      =
+dist_noinst_header_files    =
 extra_test_drivers          =
 library_test_drivers        =
 source_test_drivers         =
@@ -37,8 +37,8 @@ include  $(srcdir)/TestConf.mak
 ##    List of Source and Header Files.
 ##
 
-DIST_NOINST_DATA_FILES      +=  CMakeLists.txt
-DIST_NOINST_HEADER_FILES    +=  TestDriver.h
+dist_noinst_data_files      +=  CMakeLists.txt
+dist_noinst_header_files    +=  TestDriver.h
 extra_test_drivers          +=
 library_test_drivers        +=  libTestDriver.a
 source_test_drivers         +=  TestDriver.cpp
@@ -50,20 +50,20 @@ source_test_drivers         +=  TestDriver.cpp
 test_cppflags_common        +=
 test_ldflags_common         +=
 
-test_cppflags_xunit         =  @CPPUNIT_CPPFLAGS@
-test_cflags_xunit           =  @CPPUNIT_CFLAGS@
-test_cxxflags_xunit         =  @CPPUNIT_CXXFLAGS@
-test_ldflags_xunit          =  @CPPUNIT_LDFLAGS@
+test_cppflags_xunit         =  @cppunit_cppflags@
+test_cflags_xunit           =  @cppunit_cflags@
+test_cxxflags_xunit         =  @cppunit_cxxflags@
+test_ldflags_xunit          =  @cppunit_ldflags@
 
 if  AMCNF_CPPUNIT_ENABLED
-test_link_ldadd_xunit       =  @CPPUNIT_LINK_LDADD@
+test_link_ldadd_xunit       =  @cppunit_link_ldadd@
 else
 test_link_ldadd_xunit       =
 endif
 
 AM_CPPFLAGS         =  \
         -I${testee_source_dir}      \
-        -I${INCTOP_SOURCE_DIR}      \
+        -I${inctop_source_dir}      \
         -I${driver_source_dir}      \
         -I${driver_binary_dir}      \
         ${test_cppflags_common}     \
@@ -89,7 +89,7 @@ noinst_LIBRARIES    =  ${library_test_drivers}
 ##    Include Common Install Settings.
 ##
 
-include  $(top_srcdir)/.M4/Makefile.Install.inc
+include  $(top_srcdir)/.M4/BuildCommon/Install.inc
 
 ##
 ##    Build of Test Drivers.

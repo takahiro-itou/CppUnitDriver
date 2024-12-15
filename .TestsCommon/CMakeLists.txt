@@ -4,22 +4,29 @@
 ##    モジュールの設定。
 ##
 
-set(TARGET_TESTEE_LIBRARY   "${MODULE_TITLE}")
+set(target_testee_library   "${module_title}")
 
-set(DRIVER_SOURCE_DIR       "${LIBTOP_SOURCE_DIR}/Tests")
-set(DRIVER_BINARY_DIR       "${LIBTOP_BINARY_DIR}/Tests")
+set(driver_source_dir       "${libtop_source_dir}/Tests")
+set(driver_binary_dir       "${libtop_binary_dir}/Tests")
+
+Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 
 ##----------------------------------------------------------------
 ##
-##    テストの設定。
+##    テストの共通設定。
 ##
 
 set(tester_link_libraries
-        ${PROJECT_NAME}-${TARGET_TESTEE_LIBRARY}
-        ${PROJECT_NAME}-TestDriver
+        ${project_target_prefix}${target_testee_library}
+        ${project_target_prefix}TestDriver
 )
 
-include_directories(${PROJECT_SOURCE_DIR}/Lib/Tests)
+include_directories(${libtop_source_dir}/Tests)
 link_libraries     (${tester_link_libraries})
+
+##----------------------------------------------------------------
+##
+##    テストの個別設定。
+##
 
 Include (TestConf.cmake)
