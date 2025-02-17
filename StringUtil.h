@@ -31,5 +31,15 @@ toString(const T &x)
     return  ss.str();
 }
 
+template <typename T>
+typename std::enable_if<std::is_enum<T>::value, std::string>::type
+toString(const T &x)
+{
+    std::stringstream   ss;
+    ss  <<  static_cast<int>(x);
+
+    return  ss.str();
+}
+
 #endif
 
