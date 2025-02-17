@@ -89,8 +89,8 @@ void  assertEqual(
 {
     if ( vExp != vAct ) {
         std::cerr   <<  "\nEquality Assertion Failed."
-                    <<  "\n  Expected : "   <<  vExp
-                    <<  "\n  Actual   : "   <<  vAct
+                    <<  "\n  Expected : "   <<  toString(vExp)
+                    <<  "\n  Actual   : "   <<  toString(vAct)
                     <<  std::endl;
         exit ( 1 );
     }
