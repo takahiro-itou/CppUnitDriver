@@ -13,13 +13,23 @@
 *************************************************************************/
 
 /**
-**      An Interface of String Helper.
+**      An Interface of String Util.
 **
-**      @file       StringHelper.h
+**      @file       StringUtil.h
 **/
 
-#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_STRING_HELPER_H )
-#    define   CPPUNITDRIVER_TESTS_INCLUDED_STRING_HELPER_H
+#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H )
+#    define   CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H
+
+template <typename T>
+typename std::enable_if<!std::is_enum<T>::value, std::string>::type
+toString(const T &x)
+{
+    std::stringstream   ss;
+    ss  <<  x;
+
+    return  ss.str();
+}
 
 #endif
 
