@@ -48,6 +48,10 @@ using   namespace   CPPUNIT_NS;
 #include    <iostream>
 #include    <stdlib.h>
 
+#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H )
+#    include    "StringUtil.h"
+#endif
+
 class   TestFixture
 {
 public:
