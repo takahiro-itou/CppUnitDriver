@@ -21,6 +21,11 @@
 #if !defined( CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H )
 #    define   CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H
 
+#if !defined( CPPUNITDRIVER_SYS_INCLUDED_SSTREAM )
+#    include    <sstream>
+#    define   CPPUNITDRIVER_SYS_INCLUDED_SSTREAM
+#endif
+
 template <typename T>
 typename std::enable_if<!std::is_enum<T>::value, std::string>::type
 toString(const T &x)
