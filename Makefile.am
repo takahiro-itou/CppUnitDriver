@@ -39,6 +39,7 @@ include  $(srcdir)/TestConf.mak
 
 dist_noinst_data_files      +=  CMakeLists.txt
 dist_noinst_header_files    +=  TestDriver.h
+dist_noinst_header_files    +=  StringUtil.h
 extra_test_drivers          +=
 library_test_drivers        +=  libTestDriver.a
 source_test_drivers         +=  TestDriver.cpp
