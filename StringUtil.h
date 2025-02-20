@@ -26,7 +26,7 @@
 #    define   CPPUNITDRIVER_SYS_INCLUDED_SSTREAM
 #endif
 
-template  <typename T>
+template  <typename  T>
 typename  std::enable_if<!std::is_enum<T>::value, std::string>::type
 toString(const T &x)
 {
@@ -36,12 +36,13 @@ toString(const T &x)
     return  ss.str();
 }
 
-template  <typename T>
+template  <typename  T>
 typename  std::enable_if<std::is_enum<T>::value, std::string>::type
 toString(const T &x)
 {
+    typedef     typename  std::underlying_type<T>::type     base_type;
     std::stringstream   ss;
-    ss  <<  static_cast<typename std::underlying_type<T>::type>(x);
+    ss  <<  static_cast<base_type>(x);
 
     return  ss.str();
 }
