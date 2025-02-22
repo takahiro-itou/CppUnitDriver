@@ -3,7 +3,7 @@
 **                                                                      **
 **                      ---  Unit Test Driver  ---                      **
 **                                                                      **
-**          Copyright (C), 2016-2024, Takahiro Itou                     **
+**          Copyright (C), 2016-2025, Takahiro Itou                     **
 **          All Rights Reserved.                                        **
 **                                                                      **
 **          License: (See COPYING or LICENSE files)                     **
@@ -48,6 +48,10 @@ using   namespace   CPPUNIT_NS;
 #include    <iostream>
 #include    <stdlib.h>
 
+#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_STRING_UTIL_H )
+#    include    "StringUtil.h"
+#endif
+
 class   TestFixture
 {
 public:
@@ -85,8 +89,8 @@ void  assertEqual(
 {
     if ( vExp != vAct ) {
         std::cerr   <<  "\nEquality Assertion Failed."
-                    <<  "\n  Expected : "   <<  vExp
-                    <<  "\n  Actual   : "   <<  vAct
+                    <<  "\n  Expected : "   <<  toString(vExp)
+                    <<  "\n  Actual   : "   <<  toString(vAct)
                     <<  std::endl;
         exit ( 1 );
     }
