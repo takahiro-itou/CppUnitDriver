@@ -21,6 +21,11 @@
 #if !defined( CPPUNITDRIVER_TESTS_INCLUDED_TEST_DRIVER_H )
 #    define   CPPUNITDRIVER_TESTS_INCLUDED_TEST_DRIVER_H
 
+#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_TEST_CONF_H )
+#    include    "TestConf.h"
+#endif
+
+
 //----------------------------------------------------------------
 /**   単体テストを起動するエントリポイント。
 **
