@@ -21,7 +21,9 @@ set(tester_link_libraries
         ${project_target_prefix}TestDriver
 )
 
+message("tester_link_libraries = ${tester_link_libraries}")
 include_directories(${libtop_source_dir}/Tests)
+include_directories(${libtop_binary_dir}/Tests)
 link_libraries     (${tester_link_libraries})
 
 ##----------------------------------------------------------------
