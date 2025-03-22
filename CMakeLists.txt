@@ -57,18 +57,3 @@ target_include_directories(
     ${test_driver_module}  PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
 )
-
-
-##----------------------------------------------------------------
-##
-##    設定を書き込んだファイルを生成。
-##
-
-set(top_srcdir      "${PROJECT_SOURCE_DIR}")
-set(top_builddir    "${PROJECT_BINARY_DIR}")
-
-configure_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/TestConf.h.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/TestConf.h"
-    @ONLY
-)
