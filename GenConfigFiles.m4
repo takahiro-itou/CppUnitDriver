@@ -8,4 +8,5 @@ dnl
 
 AC_CONFIG_FILES([
     Lib/Tests/Makefile
+    Lib/Tests/TestConf.h
 ])
