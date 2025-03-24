@@ -38,8 +38,9 @@ target_link_libraries(
 )
 
 # message("tester_link_libraries = ${tester_link_libraries}")
-include_directories(${CMAKE_CURRENT_BINARY_DIR})
-link_libraries     (${tester_link_libraries})
+# include_directories(${CMAKE_CURRENT_BINARY_DIR})
+# link_libraries     (${tester_link_libraries})
+link_libraries(${project_module_target}-Test)
 
 
 ##----------------------------------------------------------------
