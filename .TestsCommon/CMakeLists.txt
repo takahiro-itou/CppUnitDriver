@@ -24,6 +24,13 @@ set(tester_link_libraries
 
 add_library(${project_module_target}-Test   INTERFACE)
 
+target_include_directories(
+        ${project_module_target}-Test
+        INTERFACE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 message("tester_link_libraries = ${tester_link_libraries}")
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 link_libraries     (${tester_link_libraries})
