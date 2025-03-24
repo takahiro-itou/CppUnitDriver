@@ -17,11 +17,6 @@ Include (${common_cmake_dir}/BuildCommon/ConfigTarget.cmake)
 ##    テストの共通設定。
 ##
 
-set(tester_link_libraries
-        ${project_target_prefix}${target_testee_library}
-        ${project_target_prefix}TestDriver
-)
-
 add_library(${project_module_target}-Test   INTERFACE)
 
 target_include_directories(
@@ -34,7 +29,8 @@ target_include_directories(
 target_link_libraries(
         ${project_module_target}-Test
         INTERFACE
-        ${tester_link_libraries}
+        ${project_target_prefix}${target_testee_library}
+        ${project_target_prefix}TestDriver
 )
 
 # message("tester_link_libraries = ${tester_link_libraries}")
