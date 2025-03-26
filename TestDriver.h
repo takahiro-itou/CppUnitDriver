@@ -21,6 +21,7 @@
 #if !defined( CPPUNITDRIVER_TESTS_INCLUDED_TEST_DRIVER_H )
 #    define   CPPUNITDRIVER_TESTS_INCLUDED_TEST_DRIVER_H
 
+
 //----------------------------------------------------------------
 /**   単体テストを起動するエントリポイント。
 **

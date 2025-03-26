@@ -41,3 +41,19 @@ Else  ()
     )
     message(WARNING "Target TestDriver::CppUnit is NOT defined.")
 EndIf ()
+
+
+##----------------------------------------------------------------
+##
+##    インクルードパスの設定。
+##
+
+target_include_directories(
+    ${test_driver_module}  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+)
+
+target_include_directories(
+    ${test_driver_module}  PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}>
+)

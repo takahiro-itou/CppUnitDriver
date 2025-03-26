@@ -1,0 +1,36 @@
+﻿//  -*-  coding: utf-8-with-signature;  mode: c++  -*-  //
+/*************************************************************************
+**                                                                      **
+**                      ---  Unit Test Driver  ---                      **
+**                                                                      **
+**          Copyright (C), 2016-2025, Takahiro Itou                     **
+**          All Rights Reserved.                                        **
+**                                                                      **
+**          License: (See COPYING or LICENSE files)                     **
+**          GNU Affero General Public License (AGPL) version 3,         **
+**          or (at your option) any later version.                      **
+**                                                                      **
+*************************************************************************/
+
+/**
+**      Test Configurations.
+**
+**      @file       TestConf.h.in
+**/
+
+#if !defined( CPPUNITDRIVER_TESTS_INCLUDED_TEST_CONF_H )
+#    define   CPPUNITDRIVER_TESTS_INCLUDED_TEST_CONF_H
+
+#define     PROJECT_SOURCE_DIR      "@top_srcdir@"
+#define     PROJECT_BINARY_DIR      "@top_builddir@"
+
+#define     INCTOP_DIR_NAME         "@inctop_dir_name@"
+#define     INCPKG_DIR_NAME         "@incpkg_dir_name@"
+#define     LIBTOP_DIR_NAME         "@libtop_dir_name@"
+
+#define     INCTOP_SOURCE_DIR       "@top_srcdir@/@inctop_dir_name@"
+#define     INCTOP_BINARY_DIR       "@top_builddir@/@inctop_dir_name@"
+#define     LIBTOP_SOURCE_DIR       "@top_srcdir@/@libtop_dir_name@"
+#define     LIBTOP_BINARY_DIR       "@top_builddir@/@libtop_dir_name@"
+
+#endif
