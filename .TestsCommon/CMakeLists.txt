@@ -33,9 +33,6 @@ target_link_libraries(
         ${project_target_prefix}TestDriver
 )
 
-# message("tester_link_libraries = ${tester_link_libraries}")
-# include_directories(${CMAKE_CURRENT_BINARY_DIR})
-# link_libraries     (${tester_link_libraries})
 link_libraries(${project_module_target}-Test)
 
 
